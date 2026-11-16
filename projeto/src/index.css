@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Manrope", ui-sans-serif, system-ui, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: #ffffff;
+  color: #1e293b;
+  font-family: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
+}
+
+.icon-button {
+  display: grid;
+  width: 2.75rem;
+  height: 2.75rem;
+  place-items: center;
+  border-radius: 0.75rem;
+  transition: background-color 160ms ease;
+}
+
+.icon-button:hover {
+  background: #f1f5f9;
+}
+
+.filter {
+  display: inline-flex;
+  min-height: 2.5rem;
+  flex-shrink: 0;
+  align-items: center;
+  gap: 0.4rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 999px;
+  background: white;
+  padding: 0.5rem 0.9rem;
+  color: #475569;
+  font-size: 0.8rem;
+  font-weight: 700;
+  transition: 160ms ease;
+}
+
+.filter:hover,
+.filter.active {
+  border-color: #0b5c62;
+  background: #0b5c62;
+  color: white;
+}
+
+.mobile-nav {
+  display: flex;
+  min-height: 4.25rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.2rem;
+  color: #64748b;
+  font-size: 0.65rem;
+  font-weight: 700;
+}
+
+.mobile-nav.active {
+  color: #0b5c62;
+}
+
+::selection {
+  background: #d4e8e5;
+  color: #123b3d;
+}
+
+:focus-visible {
+  outline: 3px solid #0b5c62;
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}
